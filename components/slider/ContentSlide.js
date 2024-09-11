@@ -39,7 +39,7 @@ const MySlider = async () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src={page.data.og_image} alt="Image" />
+                        <img src={page.data.og_image.url} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #01</Link></h6>
                 </div>
@@ -47,7 +47,7 @@ const MySlider = async () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src={page.data.og_image} alt="Image" />
+                        <img src={page.data.og_image.url} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #02</Link></h6>
                 </div>
@@ -55,7 +55,7 @@ const MySlider = async () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src={page.data.og_image} alt="Image" />
+                        <img src={page.data.og_image.url} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #03</Link></h6>
                 </div>
@@ -63,7 +63,7 @@ const MySlider = async () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src={page.data.og_image} alt="Image" />
+                        <img src={page.data.og_image.url} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #04</Link></h6>
                 </div>
@@ -71,7 +71,7 @@ const MySlider = async () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src={page.data.og_image} alt="Image" />
+                        <img src={page.data.og_image.url} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #05</Link></h6>
                 </div>
