@@ -2,6 +2,8 @@
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { createClient } from "@/prismicio"
+
 
 const swiperOptions = {
     modules: [Autoplay, Pagination, Navigation],
@@ -68,7 +70,11 @@ const swiperOptions2 = {
     // disableOnInteraction: false
 }
 
-export default function Collection1() {
+export default async function Collection1() {
+
+    const client = createClient()
+    const page = await client.getSingle('main')
+
     return (
         <>
 

@@ -1,10 +1,14 @@
 'use client'
+import { createClient } from "@/prismicio"
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 // import "swiper/swiper-bundle.min.css"
 
-const MySlider = () => {
+const MySlider = async () => {
+    const client = createClient()
+    const page = await client.getSingle('main')
+
     const swiperOptions = {
         modules: [Autoplay, Pagination, Navigation],
         direction: "vertical",
@@ -35,7 +39,7 @@ const MySlider = () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src="/assets/images/product/product1.jpg" alt="Image" />
+                        <img src={page.data.og_image} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #01</Link></h6>
                 </div>
@@ -43,7 +47,7 @@ const MySlider = () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src="/assets/images/product/product2.jpg" alt="Image" />
+                        <img src={page.data.og_image} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #02</Link></h6>
                 </div>
@@ -51,7 +55,7 @@ const MySlider = () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src="/assets/images/product/product3.jpg" alt="Image" />
+                        <img src={page.data.og_image} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #03</Link></h6>
                 </div>
@@ -59,7 +63,7 @@ const MySlider = () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src="/assets/images/product/product4.jpg" alt="Image" />
+                        <img src={page.data.og_image} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #04</Link></h6>
                 </div>
@@ -67,7 +71,7 @@ const MySlider = () => {
             <SwiperSlide className="swiper-slide" data-swiper-autoplay={1000}>
                 <div className="tf-product">
                     <div className="image">
-                        <img src="/assets/images/product/product5.jpg" alt="Image" />
+                        <img src={page.data.og_image} alt="Image" />
                     </div>
                     <h6 className="name"><Link href="/item-detail">SKELATON #05</Link></h6>
                 </div>
