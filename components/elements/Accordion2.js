@@ -23,16 +23,20 @@ export default function Accordion2() {
         <>
             <div className="tf-flat-accordion2">
 
-                {   
-                    faq?.data?.faq2?.map((data, index) => (
-                        <div key={index} className="flat-toggle2">
-                            <h6 className={isActive === index+1 ? "toggle-title active" : "toggle-title"} onClick={() => handleClick(index+1)}>{data.question}</h6>
-                            <div className="toggle-content" style={{ display: `${isActive === index+1 ? "block" : "none"}` }}>
-                                <p>{data.answer}
-                                </p>
+                {
+                    faq?.data?.faq2.length > 0 ? (
+                        faq?.data?.faq2?.map((data, index) => (
+                            <div key={index} className="flat-toggle2">
+                                <h6 className={isActive === index + 1 ? "toggle-title active" : "toggle-title"} onClick={() => handleClick(index + 1)}>{data.question}</h6>
+                                <div className="toggle-content" style={{ display: `${isActive === index + 1 ? "block" : "none"}` }}>
+                                    <p>{data.answer}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))
+                        ))
+                    ) : (
+                        <p>loading FAQ</p>
+                    )
                 }
 
                 {/* <div className="flat-toggle2">

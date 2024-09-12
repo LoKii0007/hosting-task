@@ -23,16 +23,19 @@ export default function Accordion1() {
         <>
             <div className="tf-flat-accordion2">
 
-                { 
-                  faq?.data?.faq1?.map((data, index)=>(
-                    <div key={index} className={`flat-toggle2 ${index === 0 ? '':''}`}>
-                    <h6  className={isActive === index+1 ? "toggle-title active" : "toggle-title"} onClick={() => handleClick(index + 1)}>{data.question}</h6>
-                    <div className="toggle-content" style={{ display: `${isActive === index+1 ? "block" : "none"}` }}>
-                        <p>{data.answer}
-                        </p>
-                    </div>
-                </div>
-                  ))
+                {faq?.data?.faq1?.length > 0 ? (
+                    faq?.data?.faq1?.map((data, index) => (
+                        <div key={index} className={`flat-toggle2 ${index === 0 ? '' : ''}`}>
+                            <h6 className={isActive === index + 1 ? "toggle-title active" : "toggle-title"} onClick={() => handleClick(index + 1)}>{data.question}</h6>
+                            <div className="toggle-content" style={{ display: `${isActive === index + 1 ? "block" : "none"}` }}>
+                                <p>{data.answer}
+                                </p>
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p>loading FAQ</p>
+                )
                 }
                 {/* <div className="flat-toggle2 active">
                     <h6  className={isActive === 1 ? "toggle-title active" : "toggle-title"} onClick={() => handleClick(1)}>What are the NFTs?</h6>
