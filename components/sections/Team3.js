@@ -1,13 +1,8 @@
 'use client'
 
-import { createClient } from "@/prismicio"
 import Link from "next/link"
 
-export default async function Team3() {
-
-    const client = createClient()
-    const teamImage = await client.getSingle("collection_images")
-    console.log(teamImage.data.team_images[0].image.url)
+export default function Team3() {
 
     return (
         <>
