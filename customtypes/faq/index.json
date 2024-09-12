@@ -1,0 +1,57 @@
+{
+  "format": "custom",
+  "id": "faq",
+  "label": "faq",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "faq1": {
+        "type": "Group",
+        "config": {
+          "label": "faq1",
+          "repeat": true,
+          "fields": {
+            "question": {
+              "type": "Text",
+              "config": {
+                "label": "question",
+                "placeholder": ""
+              }
+            },
+            "answer": {
+              "type": "Text",
+              "config": {
+                "label": "answer",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "faq2": {
+        "type": "Group",
+        "config": {
+          "label": "faq2",
+          "repeat": true,
+          "fields": {
+            "question": {
+              "type": "Text",
+              "config": {
+                "label": "question",
+                "placeholder": ""
+              }
+            },
+            "answer": {
+              "type": "Text",
+              "config": {
+                "label": "answer",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Link from "next/link"
 import { TypeAnimation } from 'react-type-animation'
 import { Swiper, SwiperSlide } from "swiper/react"
 import CounterUp from "../elements/CounterUp"
+import { createClient } from "@/prismicio"
 
 const swiperOptions = {
     loop: true,
@@ -10,7 +11,11 @@ const swiperOptions = {
     spaceBetween: 0,
 }
 
-export default function Slider1() {
+export default async function Slider1() {
+
+    const client = createClient()
+    const heroSectionData = await client.getSingle('collection_images')
+
     return (
         <>
 
@@ -68,9 +73,9 @@ export default function Slider1() {
                                                     </div>
                                                 </div>
                                                 <div className="image">
-                                                    <img src="/assets/images/slider/slider-8.png" alt="Image" className="img ani5" />
-                                                    <img src="/assets/images/slider/slider-7.png" alt="Image" className="ani4 img-1" />
-                                                    <img src="/assets/images/slider/slider-6.png" alt="Image" className="ani5 img-2" />
+                                                    <img src={heroSectionData.data.hero_section[0].image.url} alt="Image" className="img ani5" />
+                                                    <img src={heroSectionData.data.hero_section[0].image.url} className="ani4 img-1" />
+                                                    <img src={heroSectionData.data.hero_section[0].image.url} alt="Image" className="ani5 img-2" />
                                                 </div>
                                             </div>
                                         </div>{/* item*/}
@@ -123,7 +128,7 @@ export default function Slider1() {
                                                     </div>
                                                 </div>
                                                 <div className="image">
-                                                    <img src="/assets/images/slider/slider-8.png" alt="Image" className="img ani5" />
+                                                    <img style={{width:'100vw'}} src={heroSectionData.data.hero_section[0].image.url} className="img ani5" />
                                                     <img src="/assets/images/slider/slider-7.png" alt="Image" className="ani4 img-1" />
                                                     <img src="/assets/images/slider/slider-6.png" alt="Image" className="ani5 img-2" />
                                                 </div>

@@ -1,0 +1,118 @@
+{
+  "format": "custom",
+  "id": "collection_images",
+  "label": "images",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "collection_images": {
+        "type": "Group",
+        "config": {
+          "label": "collection images",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {
+                  "width": 300,
+                  "height": 300
+                },
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "hero_section": {
+        "type": "Group",
+        "config": {
+          "label": "hero section",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {
+                  "width": null,
+                  "height": null
+                },
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
+      "team_section": {
+        "type": "Group",
+        "config": {
+          "label": "team section",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "image",
+                "constraint": {
+                  "width": 100,
+                  "height": 100
+                },
+                "thumbnails": []
+              }
+            },
+            "team_member_name": {
+              "type": "Text",
+              "config": {
+                "label": "team member name",
+                "placeholder": ""
+              }
+            },
+            "position": {
+              "type": "Text",
+              "config": {
+                "label": "position",
+                "placeholder": ""
+              }
+            },
+            "linkedin": {
+              "type": "Link",
+              "config": {
+                "label": "linkedin",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            },
+            "facebook": {
+              "type": "Link",
+              "config": {
+                "label": "facebook",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            },
+            "instagram": {
+              "type": "Link",
+              "config": {
+                "label": "instagram",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

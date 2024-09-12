@@ -5,6 +5,315 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Item in *images → collection images*
+ */
+export interface CollectionImagesDocumentDataCollectionImagesItem {
+  /**
+   * image field in *images → collection images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.collection_images[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *images → hero section*
+ */
+export interface CollectionImagesDocumentDataHeroSectionItem {
+  /**
+   * image field in *images → hero section*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.hero_section[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Item in *images → team section*
+ */
+export interface CollectionImagesDocumentDataTeamSectionItem {
+  /**
+   * image field in *images → team section*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * team member name field in *images → team section*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[].team_member_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  team_member_name: prismic.KeyTextField;
+
+  /**
+   * position field in *images → team section*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[].position
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  position: prismic.KeyTextField;
+
+  /**
+   * linkedin field in *images → team section*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[].linkedin
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  linkedin: prismic.LinkField;
+
+  /**
+   * facebook field in *images → team section*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[].facebook
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  facebook: prismic.LinkField;
+
+  /**
+   * instagram field in *images → team section*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[].instagram
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  instagram: prismic.LinkField;
+}
+
+/**
+ * Content for images documents
+ */
+interface CollectionImagesDocumentData {
+  /**
+   * collection images field in *images*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.collection_images[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  collection_images: prismic.GroupField<
+    Simplify<CollectionImagesDocumentDataCollectionImagesItem>
+  >;
+
+  /**
+   * hero section field in *images*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.hero_section[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  hero_section: prismic.GroupField<
+    Simplify<CollectionImagesDocumentDataHeroSectionItem>
+  >;
+
+  /**
+   * team section field in *images*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: collection_images.team_section[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  team_section: prismic.GroupField<
+    Simplify<CollectionImagesDocumentDataTeamSectionItem>
+  >;
+}
+
+/**
+ * images document from Prismic
+ *
+ * - **API ID**: `collection_images`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CollectionImagesDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<CollectionImagesDocumentData>,
+    "collection_images",
+    Lang
+  >;
+
+/**
+ * Item in *faq → faq1*
+ */
+export interface FaqDocumentDataFaq1Item {
+  /**
+   * question field in *faq → faq1*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.faq1[].question
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question: prismic.KeyTextField;
+
+  /**
+   * answer field in *faq → faq1*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.faq1[].answer
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  answer: prismic.KeyTextField;
+}
+
+/**
+ * Item in *faq → faq2*
+ */
+export interface FaqDocumentDataFaq2Item {
+  /**
+   * question field in *faq → faq2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.faq2[].question
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question: prismic.KeyTextField;
+
+  /**
+   * answer field in *faq → faq2*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.faq2[].answer
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  answer: prismic.KeyTextField;
+}
+
+/**
+ * Content for faq documents
+ */
+interface FaqDocumentData {
+  /**
+   * faq1 field in *faq*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.faq1[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  faq1: prismic.GroupField<Simplify<FaqDocumentDataFaq1Item>>;
+
+  /**
+   * faq2 field in *faq*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: faq.faq2[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  faq2: prismic.GroupField<Simplify<FaqDocumentDataFaq2Item>>;
+}
+
+/**
+ * faq document from Prismic
+ *
+ * - **API ID**: `faq`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FaqDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<FaqDocumentData>, "faq", Lang>;
+
+type HomepageDocumentDataSlicesSlice = never;
+
+/**
+ * Content for homepage documents
+ */
+interface HomepageDocumentData {
+  /**
+   * Slice Zone field in *homepage*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<HomepageDocumentDataSlicesSlice> /**
+   * Meta Title field in *homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: homepage.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *homepage*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: homepage.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *homepage*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: homepage.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * homepage document from Prismic
+ *
+ * - **API ID**: `homepage`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomepageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<HomepageDocumentData>,
+    "homepage",
+    Lang
+  >;
+
+/**
  * Item in *main → navigation*
  */
 export interface MainDocumentDataNavigationItem {
@@ -90,7 +399,53 @@ interface MainDocumentData {
 export type MainDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<Simplify<MainDocumentData>, "main", Lang>;
 
-export type AllDocumentTypes = MainDocument;
+export type AllDocumentTypes =
+  | CollectionImagesDocument
+  | FaqDocument
+  | HomepageDocument
+  | MainDocument;
+
+/**
+ * Primary content in *Hero → Default → Primary*
+ */
+export interface HeroSliceDefaultPrimary {
+  /**
+   * heading field in *Hero → Default → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.default.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  heading: prismic.TitleField;
+}
+
+/**
+ * Default variation for Hero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Hero*
+ */
+type HeroSliceVariation = HeroSliceDefault;
+
+/**
+ * Hero Shared Slice
+ *
+ * - **API ID**: `hero`
+ * - **Description**: Hero
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -102,10 +457,26 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      CollectionImagesDocument,
+      CollectionImagesDocumentData,
+      CollectionImagesDocumentDataCollectionImagesItem,
+      CollectionImagesDocumentDataHeroSectionItem,
+      CollectionImagesDocumentDataTeamSectionItem,
+      FaqDocument,
+      FaqDocumentData,
+      FaqDocumentDataFaq1Item,
+      FaqDocumentDataFaq2Item,
+      HomepageDocument,
+      HomepageDocumentData,
+      HomepageDocumentDataSlicesSlice,
       MainDocument,
       MainDocumentData,
       MainDocumentDataNavigationItem,
       AllDocumentTypes,
+      HeroSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceVariation,
+      HeroSliceDefault,
     };
   }
 }

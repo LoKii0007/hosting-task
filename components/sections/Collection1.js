@@ -73,7 +73,8 @@ const swiperOptions2 = {
 export default async function Collection1() {
 
     const client = createClient()
-    const page = await client.getSingle('main')
+    const CollectionImages = await client.getSingle('collection_images')
+    console.log(CollectionImages.data.collection_images.length)
 
     return (
         <>
@@ -84,7 +85,19 @@ export default async function Collection1() {
                         <div className="col-md-12 wow fadeInUp">
                             <div className="swiper-container collection-1 visible">
                                 <Swiper {...swiperOptions} className="swiper-wrapper ">
-                                    <SwiperSlide>
+                                    {CollectionImages.data.collection_images.map((image, index) => (
+                                        <SwiperSlide key={index} >
+                                            <div className="slider-item">
+                                                <div className={`tf-product ${index == 1 ? 'active' : ''}`}>
+                                                    <div className="image">
+                                                        <img  src={image.image.url} alt="Image" />
+                                                    </div>
+                                                    <h6 className="name"><Link href="/item-detail">SKELATON #01</Link></h6>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                    {/* <SwiperSlide>
                                         <div className="slider-item">
                                             <div className="tf-product ">
                                                 <div className="image">
@@ -92,7 +105,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKELATON #01</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -102,7 +115,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -112,7 +125,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -122,7 +135,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -132,7 +145,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKELATON #01</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -142,7 +155,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -152,8 +165,8 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
-                                    </SwiperSlide>
+                                        </div>
+                                    </SwiperSlide> */}
                                 </Swiper>
                             </div>
                         </div>
@@ -164,7 +177,20 @@ export default async function Collection1() {
                         <div className="col-md-12">
                             <div className="swiper-container collection-2 visible">
                                 <Swiper {...swiperOptions2} className="swiper-wrapper ">
-                                    <SwiperSlide>
+
+                                    {CollectionImages.data.collection_images.map((image, index) => (
+                                        <SwiperSlide key={index} >
+                                            <div className="slider-item">
+                                                <div className={`tf-product ${index == 1 ? 'active' : ''}`}>
+                                                    <div className="image">
+                                                        <img src={image.image.url} alt="Image" />
+                                                    </div>
+                                                    <h6 className="name"><Link href="/item-detail">SKELATON #01</Link></h6>
+                                                </div>
+                                            </div>
+                                        </SwiperSlide>
+                                    ))}
+                                    {/* <SwiperSlide>
                                         <div className="slider-item">
                                             <div className="tf-product">
                                                 <div className="image">
@@ -172,7 +198,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -182,7 +208,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -192,7 +218,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SPOTIOR#2</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -202,7 +228,7 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS#2</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -212,17 +238,17 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS#2</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
                                             <div className="tf-product">
                                                 <div className="image">
-                                                    <img src="/assets/images/product/product6.jpg" alt="Image" />
+                                                    <img src={CollectionImages.data.collection_images[0].image.url} alt="Image" />
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
+                                        </div>
                                     </SwiperSlide>
                                     <SwiperSlide>
                                         <div className="slider-item">
@@ -232,8 +258,8 @@ export default async function Collection1() {
                                                 </div>
                                                 <h6 className="name"><Link href="/item-detail">SKISIRS #02</Link></h6>
                                             </div>
-                                        </div>{/* item*/}
-                                    </SwiperSlide>
+                                        </div>
+                                    </SwiperSlide> */}
                                 </Swiper>
                             </div>
                         </div>
