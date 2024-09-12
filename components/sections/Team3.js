@@ -41,7 +41,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Ralph Edwards</Link></h4>
                                 <p className="position">Founder</p>
@@ -56,7 +56,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team active">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Jason Smith</Link></h4>
                                 <p className="position">Co - Founder</p>
@@ -71,7 +71,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Tony Wings</Link></h4>
                                 <p className="position">Web Designer</p>
@@ -86,7 +86,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Esther Howard</Link></h4>
                                 <p className="position">Project Manager</p>
@@ -101,7 +101,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Jenny Wilson</Link></h4>
                                 <p className="position">Artist</p>
@@ -116,7 +116,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Robert Fox</Link></h4>
                                 <p className="position">UI/UX Designer</p>
@@ -131,7 +131,7 @@ export default async function Team3() {
                         <div className="col-lg-3 col-md-4 col-sm-6 col-12 ">
                             <div className="tf-team">
                                 <div className="image">
-                                    <img src={teamImage.data.team_images[0].image.url} alt="Image" />
+                                    {/* <img src={teamImage.data.team_images[0].image.url} alt="Image" /> */}
                                 </div>
                                 <h4 className="name"><Link href="/team">Devon Lane</Link></h4>
                                 <p className="position">Ux Architect</p>
